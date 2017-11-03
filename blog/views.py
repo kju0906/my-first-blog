@@ -39,3 +39,40 @@ def post_edit(request, pk):
     else:
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
+
+#새로운 포트폴리오 페이지
+
+def about(request):
+    # posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    # return render(request, 'blog/about.html', {'posts': posts})
+    return render(request, 'about.html', {})
+
+def blog_single(request):
+    # posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    # return render(request, 'blog/blog-single.html', {'posts': posts})
+    return render(request, 'blog/blog_single.html', {})
+
+def blog(request):
+    # posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    # return render(request, 'blog/blog.html', {'posts': posts})
+    return render(request, 'blog/blog.html', {})
+
+def contact(request):
+    # posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    # return render(request, 'blog/contact.html', {'posts': posts})
+    return render(request, 'blog/contact.html', {})
+
+def features(request):
+    # posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    # return render(request, 'blog/features.html', {'posts': posts})
+    return render(request, 'blog/features.html', {})
+
+def portfolio(request):
+    # posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    # return render(request, 'blog/porfolio.html', {'posts': posts})
+    return render(request, 'blog/portfolio.html', {})
+
+def project_sample(request):
+    # posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    # return render(request, 'blog/project-sample.html', {'posts': posts})
+    return render(request, 'blog/project_sample.html', {})
